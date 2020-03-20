@@ -1,0 +1,15 @@
+.Payment {
+    margin: 20px auto;
+    width: 80%;
+    text-align: center;
+    box-shadow: 0 2px 3px #ccc;
+    border: 1px solid #eee;
+    padding: 20px;
+    box-sizing: border-box;
+
+    text-align: left;
+}
+
+.Payment p {
+    color: rgb(141, 136, 136);
+}

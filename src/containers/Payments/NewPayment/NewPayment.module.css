@@ -1,0 +1,37 @@
+.NewPayment {
+    margin: 20px auto;
+    width: 80%;
+    text-align: center;
+    box-shadow: 0 2px 3px #ccc;
+    border: 1px solid #eee;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.NewPayment button {
+    height: 60px;
+    width: 200px;
+    margin: 20px auto;
+    border: 1px solid #0486c2;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: white;
+    background-color: #039ee6;
+    cursor: pointer;
+}
+
+.NewPayment button:disabled {
+    color: #5a686e;
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+
+
+@media (min-width: 600px) {
+    .ContactData {
+        width: 500px;
+    }
+}
