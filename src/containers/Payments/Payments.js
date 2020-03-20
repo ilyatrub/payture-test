@@ -23,6 +23,25 @@ class Payments extends Component {
             })
             .catch(error => this.setState({loading: false}));
     }
+
+    deletePaymentHandler = (id) => {
+        this.setState({loading: true});
+        axios.delete(`/payments/${id}.json`)
+            .then(res => {
+                // const updatedPayments = this.state.payments.filter(payment => payment.id !== id);
+                // this.setState({payments: updatedPayments});
+                axios.get('/payments.json')
+                    .then(response => {
+                        const fetchedPayments = [];
+                        for(let key in response.data){
+                            fetchedPayments.push({...response.data[key], id: key});
+                        }
+
+                        this.setState({loading: false, payments: fetchedPayments});
+                    })
+            });
+        
+    }
     
 
     render () {
@@ -30,10 +49,12 @@ class Payments extends Component {
             return (
                 <li><Payment
                     key={payment.id}
+                    id={payment.id}
                     date={payment.date}
                     paymentNumber={payment.paymentNumber}
                     paymentSum={payment.paymentSum}
-                    cardNumber={payment.cardNumber} /></li>
+                    cardNumber={payment.cardNumber}
+                    delete={this.deletePaymentHandler} /></li>
             )
         })
         return (

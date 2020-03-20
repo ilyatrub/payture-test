@@ -13,6 +13,7 @@ const Payment = props => {
                 <h4>Платеж №{props.paymentNumber}</h4>
                 <h3>Сумма платежа: {Number(props.paymentSum).toFixed(2)} руб.</h3>
                 <p>Номер карты: {cardMask}</p>
+                <button onClick={() => props.delete(props.id)}><i class="far fa-trash-alt"></i> Удалить</button>
             </div>
     )
 }

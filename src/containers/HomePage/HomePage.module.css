@@ -1,4 +1,4 @@
-.Payment {
+.HomePage {
     margin: 20px auto;
     width: 80%;
     text-align: center;
@@ -6,20 +6,5 @@
     border: 1px solid #eee;
     padding: 20px;
     box-sizing: border-box;
-
     text-align: left;
-}
-
-.Payment p {
-    color: rgb(141, 136, 136);
-}
-
-.Payment button {
-    border: none;
-    background-color: white;
-    cursor: pointer;
-}
-
-.Payment button:hover {
-    color: red;
 }
